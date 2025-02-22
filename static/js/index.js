@@ -117,3 +117,48 @@ menu.addEventListener("click", function () {
 window.addEventListener('scroll', () => {
   handleNavScroll()
 })
+
+let currentIndex = 0;
+const items = document.querySelectorAll('.carousel-item');
+const totalItems = items.length;
+
+function moveSlide(direction) {
+  currentIndex += direction;
+
+  if (currentIndex < 0) {
+    currentIndex = totalItems - 1; // Wrap around to the last item
+  } else if (currentIndex >= totalItems) {
+    currentIndex = 0; // Wrap around to the first item
+  }
+
+  const carousel = document.querySelector('.carousel');
+  carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+// Auto slide every 3 seconds
+setInterval(() => {
+  moveSlide(1);
+}, 5000); // Change every 3 seconds
+
+
+let currentIndex1 = 0;
+const items1 = document.querySelectorAll('.carousel-item1');
+const totalItems1 = items1.length;
+
+function moveSlide1(direction) {
+  currentIndex1 += direction;
+
+  if (currentIndex1 < 0) {
+    currentIndex1 = totalItems1 - 1; // Wrap around to the last item
+  } else if (currentIndex1 >= totalItems1) {
+    currentIndex1 = 0; // Wrap around to the first item
+  }
+
+  const carousel1 = document.querySelector('.carousel1');
+  carousel1.style.transform = `translateX(-${currentIndex1 * 100}%)`;
+}
+
+// Auto slide every 3 seconds
+setInterval(() => {
+  moveSlide1(1);
+}, 5000); // Change every 3 seconds

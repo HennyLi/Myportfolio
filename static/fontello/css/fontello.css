@@ -58,15 +58,11 @@
 .icon-cog:before {
   content: "\e800";
 } /* '' */
-.icon-twitter:before {
-  content: "\f099";
-} /* '' */
+
 .icon-github-circled:before {
   content: "\f09b";
 } /* '' */
-.icon-linkedin:before {
-  content: "\f0e1";
-} /* '' */
+
 .icon-codeopen:before {
   content: "\f1cb";
 } /* '' */

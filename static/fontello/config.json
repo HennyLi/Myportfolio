@@ -12,24 +12,14 @@
       "code": 61595,
       "src": "fontawesome"
     },
-    {
-      "uid": "627abcdb627cb1789e009c08e2678ef9",
-      "css": "twitter",
-      "code": 61593,
-      "src": "fontawesome"
-    },
+
     {
       "uid": "bf09b1c6561dc0ced707476e2cd83d29",
       "css": "medium",
       "code": 62010,
       "src": "fontawesome"
     },
-    {
-      "uid": "e9107949dd6c9e8ab2b29ae07156e38c",
-      "css": "linkedin",
-      "code": 61665,
-      "src": "fontawesome"
-    },
+   
     {
       "uid": "76675011e906d50af404186b489fc76f",
       "css": "codeopen",

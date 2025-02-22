@@ -5,6 +5,11 @@
   margin-right: auto;
 }
 
+.container_carou {
+  max-width: 1280px;
+  margin: 0;
+}
+
 .inner-container {
   max-width: 960px;
   margin-left: auto;

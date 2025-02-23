@@ -1,0 +1,185 @@
+section {
+  margin: 3rem 0;
+}
+
+.project-scroll {
+  display: flex;
+  overflow-x: scroll;
+  padding: 1rem;
+  margin: 0 -1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.project {
+  scroll-snap-align: center;
+  flex: 1 1 40vw;
+  display: flex;
+  flex-direction: column;
+  min-width: 40vw;
+  box-shadow: 0px 0 10px 1px rgb(0 0 0 / 20%);
+}
+
+.project + .project {
+  margin-left: 1.5rem;
+}
+
+.project-image {
+  width: 100%;
+}
+
+.project-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project:hover .project-image img,
+.project:focus-within .project-image img {
+  filter: brightness(100%) grayscale(0);
+}
+
+.project-text {
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-text p {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.project-title {
+  font-size: 1em;
+  margin: 0 0 0.25rem;
+  color: var(--shade-500);
+  text-transform: uppercase;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.5rem 0;
+  padding: 0 1rem;
+}
+
+.project-tags li {
+  margin-right: 1.5rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.project-links {
+  padding-top: 1em;
+  margin-top: auto;
+  color: var(--grey-text);
+}
+
+.project-links a {
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+  transition: color 500ms;
+}
+
+.project-links a:hover,
+.project-links a:focus {
+  color: var(--text-color);
+  text-decoration-color: var(--text-color);
+}
+
+.more-link {
+  margin: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  scroll-snap-align: center;
+}
+
+.more-link a {
+  display: block;
+  width: max-content;
+}
+
+@media screen and (max-width: 720px) {
+  .project {
+    min-width: 75vw;
+  }
+}
+
+.carousel-container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%;
+}
+
+.carousel1 {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%;
+}
+
+.carousel-item {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: black;
+  font-size: 24px;
+}
+
+.carousel-item1 {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: black;
+  font-size: 24px;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.nav-controls {
+  opacity: 0;
+  cursor: inherit;
+}
+
+.control {
+  cursor: inherit;
+}

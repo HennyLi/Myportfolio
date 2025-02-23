@@ -84,7 +84,6 @@ button:focus {
 }
 
 nav {
-  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -222,7 +221,6 @@ nav .container {
 }
 
 .nav-logo {
-  position: relative;
   line-height: 1;
   font-size: 1.1rem;
 }
@@ -435,4 +433,8 @@ footer .copyright {
     opacity: 1;
     animation: none !important;
   }
+}
+
+.project-text {
+  padding-top: 20px;
 }

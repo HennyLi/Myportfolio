@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1a324c">
+  <meta name="msapplication-navbutton-color" content="#1a324c">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="All the webpages, websites and applications I've created.">
+  <link rel="stylesheet" href="./main.css" />
+  <link rel="stylesheet" href="./page.css" />
+  <link rel="stylesheet" href="./projects.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="static/images/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon/favicon-16x16.png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y3FM96129M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-Y3FM96129M');
+  </script>
+
+  <title>Henny Li: Projects</title>
+</head>
+
+<body>
+  <a href="#main" class="skip-to-main-content">Skip to main content</a>
+  <nav class="visible">
+    <div class="container">
+      <a href="./index.html" class="nav-logo" title="Back to Homepage" style="font-size: 25px;font-weight: bold;">
+        Henny Li
+      </a>
+      <div class="nav-links">
+        <a href="./index.html" class="link">Home</a>
+        <a href="./about.html" class="link">about</a>
+        <a href="./projects.html" class="link active">projects</a>
+        <!-- <a href="./talks.html" class="link">talks</a> -->
+        <div class="social-media">
+          <a href="https://www.github.com/jemimaabu" title="Github">
+            <i class="demo-icon icon-github-circled" aria-hidden="true"></i>
+            <span class="visually-hidden">Github</span>
+          </a>
+
+          <a href="https://jemimaabu.medium.com" title="Medium">
+            <i class="demo-icon icon-medium" aria-hidden="true"></i>
+            <span class="visually-hidden">Medium</span>
+          </a>
+          <a href="https://codepen.io/jemimaabu" title="Codepen">
+            <i class="demo-icon icon-codeopen" aria-hidden="true"></i>
+            <span class="visually-hidden">Codepen</span>
+          </a>
+
+        </div>
+      </div>
+      <div class="nav-controls">
+        <button id="menu-display" title="Show Menu" class="hamburger">
+
+        </button>
+        <button id="theme-display" title="Select a color scheme" class="control">
+          <i aria-hidden="true" class="demo-icon icon-cog"></i>
+          <span class="visually-hidden">Select a color scheme</span>
+        </button>
+      </div>
+      <div class="theme-container">
+        <button class="light theme-select" id="light-select" onclick="setTheme('light')" aria-label="Set light theme">
+          <div class="theme-label">
+            Light
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="dark theme-select" id="dark-select" onclick="setTheme('dark')"
+          onkeydown="(e) => setThemeKey(e, 'dark')" aria-label="Set dark theme">
+          <div class="theme-label">
+            Dark
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="brown theme-select" id="brown-select" onclick="setTheme('brown')" aria-label="Set brown theme">
+          <div class="theme-label">
+            Brown
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="green theme-select" id="green-select" onclick="setTheme('green')" aria-label="Set green theme">
+          <div class="theme-label">
+            Green
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="pink theme-select" id="pink-select" onclick="setTheme('pink')" aria-label="Set pink theme">
+          <div class="theme-label">
+            Pink
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="neon theme-select" id="neon-select" onclick="setTheme('neon')" aria-label="Set pink theme">
+          <div class="theme-label">
+            Neon
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <main id="main">
+    <section class="container">
+      <h1 class="section-title">Projects <span class="title-icon">&#128187;</span></h1>
+      <h2 class="subsection-title">
+        Full stack Development
+      </h2>
+    </section>
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+      <!-- Indicators/dots -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+      </div>
+
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="project">
+            <div class="project-image">
+              <img src="./static/images/projects/image1.jpg" width="720" height="340" alt="A note taking application">
+            </div>
+            <div class="project-text">
+              <h3 class="project-title"> WP custom theme development</h3>
+              <p>WordPress - custom theme development
+                Network, CDN JS, Cloudflare, Cloudflare JS, Apache, Nginx, jQuery</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="project">
+            <div class="project-image">
+              <img src="./static/images/projects/image2.jpg" width="720" height="340" alt="A random gradient generator">
+            </div>
+            <div class="project-text">
+              <h3 class="project-title">Bring - React/SCSS SaaS Landing Page</h3>
+              <p>HTML, CSS, React, SaaS, JavaScript, SCSS, Tailwind CSS</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="project">
+            <div class="project-image">
+              <img src="./static/images/projects/image4.jpg" width="720" height="340" alt="Hudson Regional Hospital">
+            </div>
+            <div class="project-text">
+              <h3 class="project-title">Hudson Regional Hospital</h3>
+              <p>Web Design, Amazon Web Services, Ruby , JavaScript, React</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+    <section id="portfolios" class="container">
+      <h2 class="subsection-title">
+        Blockchain Development
+      </h2>
+      <div class="carousel-container" style="width: 60%;height: 40%;margin: auto;">
+        <section id="apps" class="container_carou">
+          <div class="main-text">
+            <div class="carousel1">
+              <div class="carousel-item1">
+                <div class="project">
+                  <div class="project-image">
+                    <img src="./static/images/projects/image7.jpg" width="720" height="340"
+                      alt="eCommerce Web3 dApp on Ethereum Blockchain">
+                  </div>
+                  <div class="project-text">
+                    <h3 class="project-title">eCommerce Web3 dApp on Ethereum Blockchain</h3>
+                    <p>Experience in building DApps, NFT marketplace using Solidity, React JS and Nodejs and interacting
+                      with
+                      Ethereum Blockchain by using Ether JS, Web3 JS API and metamask.
+                      Creating, compiling, migrating, testing and debugging smart contracts (ERC20, ERC721) using the
+                      truffle
+                      framework
+                      Developing web-based applications in NodeJS and storing the transactions in Ethereum Blockchain.
+                      Developing condition-based contracts using solidity and deploying smart contracts in TestRPC.</p>
+                    <ul class="project-tags">
+                      <li>HTMLEcommerce, Blockchain Architecture</li>
+                      <li>Ethereum, React</li>
+                      <li>Smart Contract, Solidity</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item1">
+                <div class="project">
+                  <div class="project-image">
+                    <img src="./static/images/projects/image8.jpg" width="720" height="340" alt="Nimbus">
+                  </div>
+                  <div class="project-text">
+                    <h3 class="project-title">
+                      Nimbus Platform
+                    </h3>
+                    <p>
+                      a DeFi solutions provider, aims to be a one-stop shop for
+                      all
+                      levels of crypto users Their goal was to create an intuitive platform that integrated multiple
+                      revenue-generating services for a diverse audience, from crypto newbies to hardcore enthusiasts.
+                      The
+                      initial products developed by another team proved the concept, allowing the Nimbus community to
+                      grow to
+                      thousands of users. However, the product didn’t scale well, so they approached us to re-develop
+                      and
+                      enhance their suite of solutions, adding more to the initial proposition.
+                    </p>
+                    <ul class="project-tags">
+                      <li>MultiChain Platform, Blockchain, Blockchain Architecture</li>
+                      <li>Ethereum, Smart Contract, Solidity, web3.js, Binance NFT, NFT, Bridge</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="prev" onclick="moveSlide1(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide1(1)">&#10095;</button>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <div class="wave-border top">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;" role="presentation">
+      <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+        style="stroke: none; fill: var(--shade-100)"></path>
+      <path class="neon-path" d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98"
+        style="stroke: var(--neon-color);fill: none;"></path>
+    </svg>
+  </div>
+  <footer>
+    <div class="back" style="width: 100%;margin: auto;">
+      <div style="width: 80%;margin: auto;display: flex; justify-content: space-around;">
+        <div style="font-size: 18px;width: 60%;padding-bottom: 30px;flex-direction: column;">
+          <div><a href="mailto:cboy88755@gmail.com">Contact Me: cboy88755@gmail.com</a></div>
+          <a href="https://github.com/HennyLi">Github: https://github.com/HennyLi</a>
+        </div>
+        <div style="font-size: 18px;margin: auto;width: 60%;padding-bottom: 30px;">
+          © Designed & built by Henny Li ♥
+        </div>
+      </div>
+    </div>
+</body>
+
+<script src="./static/js/index.js"></script>
+
+</html>
